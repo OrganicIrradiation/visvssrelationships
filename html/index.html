@@ -13,8 +13,14 @@
   stroke-opacity: .6;
 }
 
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
 </style>
-<title>VSS 2014 "DNA"</title>
+<title>VSS 2015 "DNA"</title>
 </head>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -33,7 +39,8 @@ var force = d3.layout.force()
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
-    .attr("height", height);
+    .attr("height", height)
+    .attr("class", "Absolute-Center");
 
 d3.json("force.json", function(error, graph) {
   force

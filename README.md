@@ -1,22 +1,26 @@
-pyVSSRelationshipPlot
+visvssrelationships
 ==========================
 
-Plotting the relationships between VSS 2014 abstracts
+Plotting the relationships between VSS 2015 abstracts
 
 ##Introduction
-This is a script that creates a force directed graph of the relationships between VSS 2014 abstract co-authors. It takes a Python dictionary that contains author and title information for the accepted abstracts ("pyVSSRelationshipData.p") and creates a dynamic plot using NetworkX and D3.js.  The force directed graph utilizes a physical simulation of charged particles and links to bring co-authored articles closer.
+This is some code that creates a force directed graph of the relationships between VSS 2015 abstract co-authors. It takes a Python dictionary that contains author and title information for the accepted abstracts (```visvssrelationships_data_2015.p```) and creates a dynamic plot using NetworkX and D3.js.  The force directed graph utilizes a physical simulation of charged particles and links to bring co-authored articles closer.
 
-![Image](images/VSS2014DNAv1.png)
+![Image](images/VSS2015DNA.png)
 
 ##Prerequisites
-You will need Python 2.7.6 and the following libraries (tested versions in parentheses):
-* networkx (1.8.1)
+You can run these in iPython. Here are the tested library requirements:
+
+* beautifulsoup4==4.3.2
+* decorator==3.4.0
+* ipy-progressbar==1.0.2
+* networkx==1.9.1
 
 D3.js is dynamically loaded for the presentation page.
 
 ##Installation & Usage
-After you have the prerequisites installed, you should download the folder to your location of choice.  Running the script will generate a "force.json" file in the html subdirectory that has all of the necessary node/link information necessary for D3.js.  Load the index.html file in the html directory to see the dynamic simulation.  Note that since the index.html requires loading a JSON file, you may need to host this on a webserver. To see a live demo, please go to:
-* http://steven.cholewiak.com/codeprojects/pyVSSRelationshipPlot/
+Running the iPython script will generate a "force.json" file in the html subdirectory that has all of the necessary node/link information necessary for D3.js.  Load the index.html file in the html directory to see the dynamic simulation.  Note that since the index.html requires loading a JSON file, you may need to host this on a webserver. To see a live demo, please go to:
+* http://steven.cholewiak.com/code/visvssrelationships_2015/
 
 ##Related Resources
 * [Force-Directed Graph Example](http://bl.ocks.org/mbostock/4062045)
