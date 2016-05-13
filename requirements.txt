@@ -1,0 +1,6 @@
+jupyter
+beautifulsoup4
+tqdm
+aiohttp
+networkx
+requests
